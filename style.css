@@ -17,14 +17,14 @@ h1 {
     background-color: #91837e;
     width: 25%;
     position: absolute;
-    height: 75%;
+    height: 100%;
     padding: 10px;
     left: 0px;
   }
   #tablero-derecho {
     width: 25%;
     position: absolute;
-    height: 100%;
+    height: 175%;
     padding: 10px;
     right: 0px;
   }  
