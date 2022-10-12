@@ -1,4 +1,3 @@
-
 arrastrarElemento(document.getElementById('componente1'));
 arrastrarElemento(document.getElementById('componente2'));
 arrastrarElemento(document.getElementById('componente3'));
@@ -26,13 +25,28 @@ function arrastrarElemento(element) {
         pos2 = 0,
         pos3 = 0,
         pos4 = 0;
-    element.onpointerdown = mostrarMensaje;
-    
+    element.onpointerdown = arrastrarPuntero
+
     function arrastrarPuntero(e) {
         e.preventDefault();
         console.log(e);
-        pos3 = e.clientX
-        pos4 = e.clientY
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onpointermove = iniciarArrastreElemento;
+        document.onpointerup = pararArrastreElemento;
+    }
+
+    function iniciarArrastreElemento(e) {
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        console.log(pos1, pos2, pos3, pos4);
+        element.style.top = element.offsetTop - pos2 + 'px';
+        element.style.left = element.offsetLeft - pos1 + 'px';
+    }
+
+    function pararArrastreElemento() {
         document.onpointerup = null;
         document.onpointermove = null;
     }
