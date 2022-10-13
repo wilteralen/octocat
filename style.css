@@ -5,28 +5,32 @@ h1 {
     color: #a72c07;
   text-align: center;
 }
+h2 {
+  color: #a72c07;
+text-align: center;
+}
 
 #gg {
     color: green;
 }
 #aa {
     color: rgb(109, 128, 0);
-    text-align: left;
+    text-align: center;
 }
 #tablero-izquierdo{
-    background-color: #91837e;
-    width: 25%;
+    background-color: #0e0d0c;
+    width: 20%;
     position: absolute;
-    height: 100%;
-    padding: 10px;
-    left: 0px;
+    height: 80%;
+    padding: 55px;
+    left: 450px;
   }
   #tablero-derecho {
     width: 25%;
     position: absolute;
-    height: 175%;
-    padding: 10px;
-    right: 0px;
+    height: 100%;
+    padding: 45px;
+    right: 300px;
   }  
   .contenedor {
     position: relative;
@@ -36,7 +40,7 @@ h1 {
   .contenedor2 {
     position: relative;
     height: 18%;
-    left: -10px;
+    left: +25px;
   }
   
   .reducido {
@@ -44,7 +48,7 @@ h1 {
   }
   
   .componente {
-    position: absolute;
+    position: center;
     max-width: 50%;
     max-height: 100%;
     z-index: 3;
@@ -52,9 +56,9 @@ h1 {
   
   .producto {
     position: absolute;
-    max-width: 100%;
-    max-height: 100%;
-    z-index: 2;
+    max-width: 150%;
+    max-height: 110%;
+    z-index: 3;
   }
   .layout {
     height: 80%;
@@ -74,8 +78,8 @@ h1 {
     height: 5%;
     background: #C4D7E0;
     position: absolute;
-    opacity: 0.7;
-    z-index: 1;
+    opacity: 0.9;
+    z-index: 3;
     margin: auto;
     left: 0px;
     right: 0px;
